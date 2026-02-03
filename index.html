@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="nl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vakanties per land</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="page">
+      <header class="hero">
+        <div>
+          <p class="eyebrow">Vakantieplanner</p>
+          <h1>Bekijk schoolvakanties per land</h1>
+          <p class="subtitle">
+            Selecteer een periode en een land (of alle landen) om te zien waar er vakanties vallen.
+          </p>
+        </div>
+      </header>
+
+      <section class="panel">
+        <form id="filterForm" class="filters">
+          <label class="field">
+            <span>Startdatum</span>
+            <input type="date" id="startDate" required />
+          </label>
+          <label class="field">
+            <span>Einddatum</span>
+            <input type="date" id="endDate" required />
+          </label>
+          <label class="field">
+            <span>Land</span>
+            <select id="countrySelect"></select>
+          </label>
+          <button type="submit" class="primary">Toon vakanties</button>
+        </form>
+      </section>
+
+      <section class="results">
+        <div class="results-header">
+          <h2>Resultaten</h2>
+          <p id="summary">Kies een periode om resultaten te zien.</p>
+        </div>
+        <div id="resultsGrid" class="results-grid"></div>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
